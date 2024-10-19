@@ -1,4 +1,4 @@
-# CrowdCoin
+# CampCoin
 ### A decentralized ethereum blockchain based crowdfunding platform inspired by [kickstarter.com](https://www.kickstarter.com) 
 
 The purpose of this project is to increase the credibility of crowdfunding campaigns created by platforms such as kickstarter.com with the use of blockchain. 
@@ -9,32 +9,32 @@ The purpose of this project is to increase the credibility of crowdfunding campa
 
 This approach of using blockchain for crowdfunding will not only increase the transparency but also reduce possible fraudulent activities that can take place in traditional crowdfunding platforms
 
-## Demo URL: https://crowd-coin-kaje94.vercel.app
 > Make sure to have metamask plugin installed with goeril network selected as this project is intended to work with only goeril network
 
 ## Prerequisites
 - Google chrome with metamask plugin installed
 - Infura endpoint to deploy contract (https://infura.io)
+- Ganache for local deployment
 - Wallet mnemonic with the first wallet address containing some eth required to deploy the initial contract
 - Metamask plugin should ideally be in the same network that infura url is pointing to
 - Node.js
-- Yarn (preferred) or NPM
+- NPM
 
 ## How to run
 
 Install the required dependencies
 ```sh
-yarn
+npm 
 ```
 
 Compile contracts in `ethereum>contracts>Campaign.sol`
 ```sh
-yarn compile-contracts
+npm  compile-contracts
 ```
 
 Test compiled Campaign contract
 ```
-yarn test
+npm  test
 ```
 
 Update the `INFURA_ENDPOINT` & `WALLET_MNEMONIC` in .env file with your wallet mnemonic & infura endpoint
@@ -45,7 +45,7 @@ INFURA_ENDPOINT=
 
 Deploy the compiled contract using the first address in your mnemonic wallet and make sure to copy deployed contract address that gets logged
 ```sh
-yarn deploy-contracts
+npm deploy-contracts
 ```
 
 Update the `NEXT_PUBLIC_FACTORY_CONTRACT_ADDRESS` in .env file with the contract address that was logged in the previous step
@@ -55,13 +55,13 @@ NEXT_PUBLIC_FACTORY_CONTRACT_ADDRESS=
 
 To run Next.js in development mode, run the following command and visit localhost:3000
 ```sh
-yarn dev
+npm run dev
 ```
 
 To run Next.js in production mode, run the following commands and visit localhost:3000
 ```sh
-yarn build
-yarn start
+npm build
+npm start
 ```
 
 ## Future work
